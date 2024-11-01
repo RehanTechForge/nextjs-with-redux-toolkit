@@ -2,7 +2,7 @@
 import { updateCartQuantity } from "@/lib/features/cart/cartSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks/hooks";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 
 const CartPage = () => {
   const products = useAppSelector((store) => store.cart.cartItem);
