@@ -1,6 +1,7 @@
 "use client";
 import { updateCartQuantity } from "@/lib/features/cart/cartSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks/hooks";
+import Image from "next/image";
 import React, { useState } from "react";
 
 const CartPage = () => {
@@ -24,9 +25,11 @@ const CartPage = () => {
                 key={item.id}
                 className="flex items-center border-b py-6 last:border-b-0"
               >
-                <img
+                <Image
                   src={item.image}
                   alt={item.name}
+                  height={80}
+                  width={80}
                   className="w-20 h-20 rounded-md mr-6 object-cover"
                 />
                 <div className="flex-grow">
